@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body{
+    background-color: black;
+}
+div{
+    display: block;
+}
+#wrapper .block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#wrapper .wrapper-inside {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    background: #fef9eb;
+    overflow: hidden;
+}
+#wrapper .down-arrow .icon {
+    display: block;
+    background-position: 0px -25px;
+    width: 12px;
+    height: 14px;
+    background-image: url(./src/skin/x2-sprite.png);
+    background-size: 86px 541px;
+}
+#wrapper .down-arrow.white .icon {
+    background-position: 0px -8px;
+    width: 12px;
+    height: 14px;
+    background-image: url(./src/x2-sprite.png);
+    background-size: 86px 541px;
+}
+#wrapper .down-arrow {
+    position:absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1010;
+    padding: 20px;
+    margin-left: -26px;
+}
+#wrapper .block.block-intro {
+    color: #fef9eb;
+    text-align: center;
+}
+#wrapper .block.block-intro .bg-inside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.bg-inside circle{
+    r:100%;
+    transition: r 0.8s ease-in;
+    transition-timing-function: cubic-bezier(0.15, 0.12, 0.165, 1);
+}
+#wrapper .date {
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 300px;
+    margin: -225px 0 0 -150px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#wrapper .block.block-intro .title {
+    font-family: "ACaslonPro-Bold", Times, Arial, serif;
+    font-size: 66px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -56px;
+}
+#wrapper .block.block-intro .subtitle {
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: 35px;
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+}
+.overlay-btns {
+    position: fixed;
+    right: 14px;
+    top: 14px;
+    z-index: 600;
+    width: 150px;
+    overflow: hidden;
+}
+.overlay-btns .info, .overlay-btns .back {
+    cursor: pointer;
+    background: #fff;
+}
+.overlay-btns .btn-info {
+    font-family: Georgia;
+    font-size: 16px;
+    color: #7e7e7e;
+    background: #000;
+}
+.overlay-btns .btn {
+    display: block;
+    width: 36px;
+    height: 35px;
+    padding-top: 1px;
+    margin-bottom: 1px;
+}
+.overlay-btns .btn-info .info-text {
+    display: block;
+    padding: 8px 0 0 0;
+    text-align: center;
+}
+.overlay-btns .block-btn-info, .overlay-btns .block-btn-back {
+    top: 11px;
+    font-size: 12px;
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    text-transform: uppercase;
+}
+.overlay-btns .block-btn-info{
+    position: absolute;
+    top: 12px;
+    left: 45px;
+}
+.btn {
+    text-decoration: none;
+    color: #000;
+}
+.overlay-content {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: 600;
+    background: url(./src/bg-about-overlay.png) repeat left top;
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    transition: opacity 800ms ease-in;
+}
+.overlay-content .btn-close-overlay {
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    background-image: url(./src/x1-sprite.png);
+    background-position: 0px -139px;
+    width: 40px;
+    height: 40px;
+    background-image: url(./src/x2-sprite.png);
+    background-size: 86px 541px;
+}
+.overlay-content .overlay-inside {
+    margin: 80px 8%;
+}
+@media screen and (max-width: 1600px){
+    .overlay-content .overlay-inside {
+        margin: 80px 100px;
+    }   
+}
+.overlay-content .block-quote .quote-text {
+    font-family: "ACaslonPro-Bold", Arial, Times, serif;
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+#wrapper .block.block-caption .block-caption-text {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-left: 110px;
+}
+#wrapper .block.block-caption .block-caption-text p {
+    text-align: left;
+    width: 330px;
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+}
+#wrapper .block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#wrapper .block .text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: 30px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+}
+#wrapper .block .text p {
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0 auto;
+    width: 530px;
+}
+#wrapper .block.block-explore .block-explore-btn {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 200px 0 0 -85px;
+}
+#wrapper .block.block-explore .block-explore-btn a {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #000;
+    text-decoration: none;
+    padding: 12px 52px;
+}
+#wrapper .block.block-explore .block-explore-btn a .text {
+    position: relative;
+    z-index: 1;
+    font-family: "CenturyGothic", Helvetica, Verdana, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+#wrapper .block.block-explore .block-explore-btn a .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#wrapper .block.block-explore .block-explore-btn a:hover .bg {
+    width: 100%; }
+#wrapper .block.block-explore .block-explore-btn a:hover .text {
+    color: #fff; }

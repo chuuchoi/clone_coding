@@ -6,21 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>clone-coding</title>
+    <!---새로고침시 스크롤 맨 위로, manual은 스크롤 위치 기억하지않음, auto는 기억-->
+    <script>history.scrollRestoration = "manual"</script>
 </head>
 <body>
     <div id="wrapper" style="height:1007px">
         <div class="wrapper-inside">
             <div class="intro">
-                <a href="#" class="down-arrow white" style="opacity:1; transform:translate3d(0,0,0);">
+                <a href="#" class="down-arrow white" style="opacity:0; transform:translate3d(0,20px,0);">
                     <span class="icon"></span>
                 </a>
+                <div class="scroll-indicator">
+                    <a href="#" class="scroll-state scroll-state-0 selected" data-index="0" style="opacity: 1; transform: translate3d(50px, 0px, 0px);"></a>
+                    <a href="#" class="scroll-state scroll-state-1" data-index="1" style="opacity: 1; transform: translate3d(80px, 0px, 0px);"></a>
+                    <a href="#" class="scroll-state scroll-state-2" data-index="2" style="opacity: 1; transform: translate3d(110px, 0px, 0px);"></a>
+                    <a href="#" class="scroll-state scroll-state-3" data-index="3" style="opacity: 1; transform: translate3d(140px, 0px, 0px);"></a>
+                </div>
+                <div class="caption-line" style="height: 0px;"></div>
+                <img src="src/flower.svg" class="main-flower" style="margin: 0; width: 0; transform: translate3d(0px, 0px, 0px);">
                 <div class="block block-intro">
                     <svg class="bg-inside"><circle cx="50%" cy="50%" r="100%" fill="black"></circle></svg>
                     <h3 class="date">1914 – 2014</h3>
                     <h1 class="title">The Great War</h1>
-                    <h2 class="subtitle" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">Centenary</h2>
+                    <h2 class="subtitle" style="opacity: 0; transform: translate3d(0px, 20px, 40px);">Centenary</h2>
                 </div>
                 <div class="block block-caption">
+                    <div class="caption-stem" style="height: 0px;"></div>
+                    <div class="caption-circle" style="opacity: 0;"></div>
+                    <div class="block-caption-detail caption-death" style="opacity: 0;">
+                        <div class="caption-title">More than</div>
+                        <div class="caption-number">10.5 million<br>deaths</div>
+                    </div>
+                    <div class="block-caption-detail caption-duration" style="opacity: 0;">
+                        <div class="caption-title">Duration</div>
+                        <div class="caption-number">4 years</div>
+                    </div>
+                    <div class="block-caption-detail caption-start caption-center" style="opacity: 0;">
+                        <div class="caption-title">Start</div>
+                        <div class="caption-number">1914</div>
+                    </div>
+                    <div class="block-caption-detail caption-end caption-center" style="opacity: 0;">
+                        <div class="caption-title">End</div>
+                        <div class="caption-number">1918</div>
+                    </div>
                     <div class="block-caption-text" style="opacity: 0;">
                         <p>
                             The Great War, also known as the First World War or WWI, was a global war centered in Europe.<br>
@@ -29,14 +57,21 @@
                     </div>
                 </div>
                 <div class="block block-text">
-                    <div class="text" style="opacity: 0; transform: translate3d(0px, 100px, 0px);">
+                    <h3 class="date" style="opacity: 0; transform: translate3d(0px, -80px, 0px);">Remembrance Day</h3>
+                    <div class="text" style="opacity: 0; transform: translate3d(0px, 80px, 0px);">
                         <p>
                             Following the end of the First World War, the poppy became a symbol of commemoration. It was among the first plants to spring to life on Europe's devastated battlefields. Its colour, reminiscent of bloodshed,<br>and its resilient yet delicate nature evoke the<br>human relationship to war.
                         </p>
                     </div>
                 </div>
                 <div class="block block-explore">
-                    <div class="block-explore-btn" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                    <h3 class="date" style="opacity: 0; transform: translate3d(0px, -80px, 0px);">Poppy Field</h3>
+                    <div class="text" style="opacity: 0; transform: translate3d(0px, 80px, 0px);">
+                        <p>
+                            The First World War was initially dubbed <span class="italic">the war<br>to end all wars.</span> Sadly, the world has witnessed<br>more than 200 conflicts in the 100 years since.<br>Poppy Field reflects on the human cost of war<br>from the beginning of the 20<span class="sup">th</span> Century.
+                        </p>
+                    </div>
+                    <div class="block-explore-btn" style="opacity: 0; transform: translate3d(0px, -80px, 0px);">
                         <a href="/graph" class="btn btn-explore">
                             <span class="bg"></span>
                             <span class="text" style="opacity: 1; transform: translate3d(0px, 0px, 0px);">Explore</span>
@@ -45,7 +80,7 @@
                 </div>
             </div>
             <div class="overlay-btns">
-                <div class="btn-overlay info" style="opacity: 1; transform: translate3d(114px, 0px, 0px);">
+                <div class="btn-overlay info" style="opacity: 0; transform: translate3d(164px, 0px, 0px);">
                     <a href="#" class="btn btn-info">
                         <span class="info-text">i</span>
                     </a>

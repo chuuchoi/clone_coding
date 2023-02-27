@@ -482,4 +482,7 @@ div {
   .mobile-only .mobile-text .btn-mobile:hover .text {
     color: #fff;
   }
+  html, body {
+    height: 100% !important;
+  }
 }
